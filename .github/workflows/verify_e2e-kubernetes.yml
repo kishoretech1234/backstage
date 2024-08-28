@@ -5,7 +5,7 @@ on:
     paths:
       - 'yarn.lock'
       - '.github/workflows/verify_e2e-kubernetes.yml'
-      - 'packages/backend-common/src/**'
+      - 'packages/backend-plugin-api/src/**'
 
 jobs:
   verify:
@@ -43,5 +43,5 @@ jobs:
         uses: helm/kind-action@0025e74a8c7512023d06dc019c617aa3cf561fde # v1.10.0
 
       - name: kubernetes test
-        working-directory: packages/backend-common
+        working-directory: packages/backend-plugin-api
         run: yarn test:kubernetes

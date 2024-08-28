@@ -7,7 +7,7 @@ on:
     paths-ignore:
       - 'yarn.lock'
       - '.github/workflows/verify_e2e-kubernetes.yml'
-      - 'packages/backend-common/src/**'
+      - 'packages/backend-plugin-api/src/**'
 
 permissions:
   contents: read
