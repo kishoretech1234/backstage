@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { createApiRef } from '@backstage/core-plugin-api';
+import { createApiRef } from '@backstage/frontend-plugin-api';
 import { ScaffolderApi } from './types';
 import { getOrCreateGlobalSingleton } from '@backstage/version-bridge';
 
@@ -26,3 +26,7 @@ export const scaffolderApiRef = getOrCreateGlobalSingleton(
       id: 'plugin.scaffolder.service',
     }),
 );
+
+export const formFieldsApiRef = createApiRef<ScaffolderFormFieldsApi>({
+  id: 'plugin.scaffolder.form-fields',
+});

@@ -14,8 +14,5 @@
  * limitations under the License.
  */
 
-export {
-  createFormField,
-  FormFieldBlueprint,
-  type FormFieldExtensionData,
-} from './FormFieldBlueprint';
+export { formFieldsApiRef } from './ref';
+export type { ScaffolderFormFieldsApi } from './types';

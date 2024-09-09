@@ -14,8 +14,9 @@
  * limitations under the License.
  */
 
-export {
-  createFormField,
-  FormFieldBlueprint,
-  type FormFieldExtensionData,
-} from './FormFieldBlueprint';
+import { createApiRef } from '@backstage/frontend-plugin-api';
+import { ScaffolderFormFieldsApi } from './types';
+
+export const formFieldsApiRef = createApiRef<ScaffolderFormFieldsApi>({
+  id: 'plugin.scaffolder.form-fields',
+});

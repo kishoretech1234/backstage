@@ -14,8 +14,12 @@
  * limitations under the License.
  */
 
-export {
-  createFormField,
-  FormFieldBlueprint,
-  type FormFieldExtensionData,
-} from './FormFieldBlueprint';
+import { FormFieldExtensionData } from '../blueprints';
+
+/**
+ * @public
+ */
+export interface ScaffolderFormFieldsApi {
+  getFormFields(): FormFieldExtensionData[];
+  addFormField(formField: FormFieldExtensionData): void;
+}
